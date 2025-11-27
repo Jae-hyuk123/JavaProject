@@ -59,12 +59,14 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="partnershipRB" min="-2" pref="98" max="-2" attributes="0"/>
                                           <Component id="soletraderRB" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                          <Component id="limitedRB" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="businessNameTf" pref="172" max="32767" attributes="0"/>
                                           <Component id="industryTf" alignment="0" max="32767" attributes="0"/>
                                           <Component id="numOfStaffTf" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="limitedRB" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="partnershipRB" alignment="0" pref="98" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -79,9 +81,12 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="longGoalsLbl" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="longGoalsLbl" min="-2" pref="132" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Component id="owner2Tf" min="-2" pref="172" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
@@ -110,25 +115,25 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="numOfBoardMembersLbl" min="-2" max="-2" attributes="0"/>
                                           <Component id="longGoalsTf" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="mainBtn" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                              <Component id="mainBtn" min="-2" pref="101" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="reportBtn" min="-2" max="-2" attributes="0"/>
+                                              <Component id="reportBtn" pref="109" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="numOfBoardMembersTf" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="voteBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="voteBtn" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -200,8 +205,8 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="shortGoalsTf" pref="54" max="32767" attributes="0"/>
-                  <Component id="longGoalsTf" max="32767" attributes="0"/>
+                  <Component id="shortGoalsTf" max="32767" attributes="0"/>
+                  <Component id="longGoalsTf" pref="54" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="40" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -358,11 +363,25 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="shortGoalsTf">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="shortGoalsTfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="longGoalsTf">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="longGoalsTfActionPerformed"/>
       </Events>
@@ -389,7 +408,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Main"/>
+        <Property name="text" type="java.lang.String" value="Main Page"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainBtnActionPerformed"/>
@@ -403,7 +422,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Vote"/>
+        <Property name="text" type="java.lang.String" value="Vote App"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voteBtnActionPerformed"/>
@@ -417,7 +436,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Report"/>
+        <Property name="text" type="java.lang.String" value="Report App"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportBtnActionPerformed"/>
@@ -482,7 +501,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Limited Company"/>
+        <Property name="text" type="java.lang.String" value="LLC"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder>
@@ -505,6 +524,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Display"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="searchBtn">
       <Properties>
@@ -516,6 +538,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Search by Type"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="deleteBtn">
       <Properties>

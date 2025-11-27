@@ -19,7 +19,11 @@ public class ContactMentorGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ContactMentorGUI.class.getName());
     private LoginInformation l;
-    private ArrayList <Business> business;
+    private ArrayList <Business> businessList;
+    //display message which we will add different variables depending on field
+    private String displayMessage;
+    //counter for array list
+    private int count;
     
 
     /**
@@ -28,9 +32,9 @@ public class ContactMentorGUI extends javax.swing.JFrame {
     public ContactMentorGUI(LoginInformation l) {
         this.l=l;
         initComponents();
-        this.getContentPane().setBackground(Color.decode("#dd7a3f"));
+        this.getContentPane().setBackground(Color.decode("#dd7a3f"));       
         //declare array list
-        business = new ArrayList<>();
+        businessList = new ArrayList<>();
         //this is to make all the dif types of business text fields disappear once the page loads and then when they click a RB it will make them appear
         ownerLbl.setVisible(false);
         ownerTf.setVisible(false);
@@ -133,8 +137,10 @@ public class ContactMentorGUI extends javax.swing.JFrame {
 
         numOfStaffTf.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        shortGoalsTf.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         shortGoalsTf.addActionListener(this::shortGoalsTfActionPerformed);
 
+        longGoalsTf.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         longGoalsTf.addActionListener(this::longGoalsTfActionPerformed);
 
         submitBtn.setBackground(new java.awt.Color(243, 225, 210));
@@ -144,17 +150,17 @@ public class ContactMentorGUI extends javax.swing.JFrame {
 
         mainBtn.setBackground(new java.awt.Color(243, 225, 210));
         mainBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        mainBtn.setText("Main");
+        mainBtn.setText("Main Page");
         mainBtn.addActionListener(this::mainBtnActionPerformed);
 
         voteBtn.setBackground(new java.awt.Color(243, 225, 210));
         voteBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        voteBtn.setText("Vote");
+        voteBtn.setText("Vote App");
         voteBtn.addActionListener(this::voteBtnActionPerformed);
 
         reportBtn.setBackground(new java.awt.Color(243, 225, 210));
         reportBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        reportBtn.setText("Report");
+        reportBtn.setText("Report App");
         reportBtn.addActionListener(this::reportBtnActionPerformed);
 
         soletraderRB.setBackground(new java.awt.Color(243, 225, 210));
@@ -174,17 +180,19 @@ public class ContactMentorGUI extends javax.swing.JFrame {
         limitedRB.setBackground(new java.awt.Color(243, 225, 210));
         radiobutton.add(limitedRB);
         limitedRB.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        limitedRB.setText("Limited Company");
+        limitedRB.setText("LLC");
         limitedRB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         limitedRB.addActionListener(this::limitedRBActionPerformed);
 
         displayBtn.setBackground(new java.awt.Color(243, 225, 210));
         displayBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         displayBtn.setText("Display");
+        displayBtn.addActionListener(this::displayBtnActionPerformed);
 
         searchBtn.setBackground(new java.awt.Color(243, 225, 210));
         searchBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         searchBtn.setText("Search by Type");
+        searchBtn.addActionListener(this::searchBtnActionPerformed);
 
         deleteBtn.setBackground(new java.awt.Color(243, 225, 210));
         deleteBtn.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -253,12 +261,13 @@ public class ContactMentorGUI extends javax.swing.JFrame {
                                             .addComponent(businessTypeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(partnershipRB, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(soletraderRB, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(limitedRB)
                                             .addComponent(businessNameTf, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                                             .addComponent(industryTf)
-                                            .addComponent(numOfStaffTf)))
+                                            .addComponent(numOfStaffTf)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(limitedRB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(partnershipRB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(searchBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
@@ -267,9 +276,11 @@ public class ContactMentorGUI extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(deleteBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(displayBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))))
-                                .addGap(46, 46, 46)
+                                .addGap(34, 34, 34)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(longGoalsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(longGoalsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(owner2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
@@ -291,16 +302,16 @@ public class ContactMentorGUI extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(numOfBoardMembersLbl)
                                             .addComponent(longGoalsTf, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(mainBtn)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(mainBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(reportBtn)))
+                                                .addComponent(reportBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(numOfBoardMembersTf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(voteBtn))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, Short.MAX_VALUE)))))
-                .addGap(45, 45, 45))
+                                            .addComponent(voteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,8 +368,8 @@ public class ContactMentorGUI extends javax.swing.JFrame {
                             .addComponent(owner2Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(shortGoalsTf, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(longGoalsTf))
+                    .addComponent(shortGoalsTf)
+                    .addComponent(longGoalsTf, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -393,19 +404,140 @@ public class ContactMentorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this is to make sure that a radio button is selected before you submit
         //could put in the else statement and will not need this code here, will test tomorrow
-        if(!soletraderRB.isSelected()&&!partnershipRB.isSelected()&&!limitedRB.isSelected()){
+        /*if(!soletraderRB.isSelected()&&!partnershipRB.isSelected()&&!limitedRB.isSelected()){
             JOptionPane.showMessageDialog(null,"You must select a business type to submit!");
-        }
+        }OPTED FOR ELSE STATEMENT AT THE END DO REDUCE CODE*/
         if(soletraderRB.isSelected()){
-            
+           String owner = ownerTf.getText();
+           //added this afterwards to help search by type           
+           String businessType = "Sole Trader";
+           String businessName = businessNameTf.getText();
+           String industry = industryTf.getText();
+           //if user enters text for num of staff it crashes the app, will try use try,catch method
+           String shortTermGoals = shortGoalsTf.getText();
+           String longTermGoals = longGoalsTf.getText();
+           //try/catch -- works will implement in other radio button sections
+           int numOfStaff;
+           try{
+               numOfStaff = Integer.parseInt(numOfStaffTf.getText());              
+           }
+           catch(NumberFormatException error){
+               JOptionPane.showMessageDialog(null,"You have to enter a whole number for the number of staff field");
+               return;
+           }
+           //this is an if statement to check if user has inputed all fields
+           if(owner.equals("")||businessName.equals("")||industry.equals("")||shortTermGoals.equals("")||longTermGoals.equals("")||numOfStaffTf.getText().equals("")){
+               JOptionPane.showMessageDialog(null,"You must fill out all fields if you want us to seriously consider aassisting you!");
+               //works but still adds object to array will need to put an else statement possibly | UPDATE: it works, will implement in all radio buttins
+           }
+           else{
+                //adds object to array list
+                SoleTrader st = new SoleTrader(owner,businessType, businessName, industry, numOfStaff, shortTermGoals, longTermGoals);
+                businessList.add(st);
+                //clear text fields so you know you have submitted afterwards
+                ownerTf.setText("");
+                businessNameTf.setText("");
+                industryTf.setText("");
+                numOfStaffTf.setText("");
+                shortGoalsTf.setText("");
+                longGoalsTf.setText("");
+                //to uncheck radio button group
+                radiobutton.clearSelection();                
+           }
         }
         else if (partnershipRB.isSelected()){
-            
+           String owner1 = owner1Tf.getText();
+           String owner2 = owner2Tf.getText();  
+           //added this afterwards to help search by type
+           String businessType = "Partnership";           
+           String businessName = businessNameTf.getText();
+           String industry = industryTf.getText();
+
+           String shortTermGoals = shortGoalsTf.getText();
+           String longTermGoals = longGoalsTf.getText();
+           //try/catch -- works will implement in other radio button sections
+           int numOfStaff;
+           try{
+               numOfStaff = Integer.parseInt(numOfStaffTf.getText());              
+           }
+           catch(NumberFormatException error){
+               JOptionPane.showMessageDialog(null,"You have to enter a whole number for the number of staff field");
+               return;
+           }
+           //this is an if statement to check if user has inputed all fields
+           if(owner1.equals("")||owner2.equals("")||businessName.equals("")||industry.equals("")||shortTermGoals.equals("")||longTermGoals.equals("")||numOfStaffTf.getText().equals("")){
+               JOptionPane.showMessageDialog(null,"You must fill out all fields if you want us to seriously consider aassisting you!");
+               //works but still adds object to array will need to put an else statement possibly | UPDATE: it works, will implement in all radio buttins
+           }
+           else{
+                //adds object to array list           
+                Partnership p = new Partnership(owner1, owner2, businessType, businessName, industry, numOfStaff, shortTermGoals, longTermGoals);
+                businessList.add(p);  
+                //clear text fields so you know you have submitted afterwards
+                owner1Tf.setText("");
+                owner2Tf.setText("");           
+                businessNameTf.setText("");
+                industryTf.setText("");
+                numOfStaffTf.setText("");
+                shortGoalsTf.setText("");
+                longGoalsTf.setText(""); 
+                //to uncheck radio button group
+                radiobutton.clearSelection();
+           }
         }
         else if (limitedRB.isSelected()){
-            
+           String ceo = ceoTf.getText();
+           //added this afterwards to help search by type
+           String businessType = "LLC";
+           String businessName = businessNameTf.getText();
+           String industry = industryTf.getText();
+
+           String shortTermGoals = shortGoalsTf.getText();
+           String longTermGoals = longGoalsTf.getText();
+           //will have to use same try catch for num of board members 
+           //try/catch -- works will implement in other radio button sections
+           int numOfStaff;
+           try{
+               numOfStaff = Integer.parseInt(numOfStaffTf.getText());              
+           }
+           catch(NumberFormatException error){
+               JOptionPane.showMessageDialog(null,"You have to enter a whole number for the number of staff field");
+               return;
+           }
+           //try/catch -- works will implement in other radio button sections
+           int numOfBoardMembers;
+           try{
+               numOfBoardMembers = Integer.parseInt(numOfBoardMembersTf.getText());              
+           }
+           catch(NumberFormatException error){
+               JOptionPane.showMessageDialog(null,"You have to enter a whole number for the number of board members field");
+               return;
+           }
+           //this is an if statement to check if user has inputed all fields
+           if(ceo.equals("")||numOfBoardMembersTf.getText().equals("")||businessName.equals("")||industry.equals("")||shortTermGoals.equals("")||longTermGoals.equals("")||numOfStaffTf.getText().equals("")){
+               JOptionPane.showMessageDialog(null,"You must fill out all fields if you want us to seriously consider aassisting you!");
+               //works but still adds object to array will need to put an else statement possibly | UPDATE: it works, will implement in all radio buttins
+           }
+           else{
+                //adds object to array list           
+                LLC llc = new LLC(ceo,businessType,  businessName, industry, numOfStaff, shortTermGoals, longTermGoals, numOfBoardMembers);
+                businessList.add(llc); 
+                //clear text fields so you know you have submitted afterwards
+                ceoTf.setText("");
+                numOfBoardMembersTf.setText("");           
+                businessNameTf.setText("");
+                industryTf.setText("");
+                numOfStaffTf.setText("");
+                shortGoalsTf.setText("");
+                longGoalsTf.setText("");
+                //to uncheck radio button group
+                radiobutton.clearSelection();                
+           }           
         }
         //maybe else statement here incase no rb is selected?
+        else{
+            JOptionPane.showMessageDialog(null,"You must select a business type to submit an application!");
+        }
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void mainBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainBtnActionPerformed
@@ -475,6 +607,47 @@ public class ContactMentorGUI extends javax.swing.JFrame {
         numOfBoardMembersLbl.setVisible(true);
         numOfBoardMembersTf.setVisible(true);        
     }//GEN-LAST:event_limitedRBActionPerformed
+
+    private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
+        // TODO add your handling code here:
+        //if statement to let you know that if there is no objects in array it cannot display
+        if(businessList.isEmpty()){
+            JOptionPane.showMessageDialog(null, "There are no applications to display!");
+        }
+        //had to use abstract class for business template so i could use getdetails method for each seperate business type other wise i was not able to get individual variables for example owner. ceo etc
+        for(int i = 0; i < businessList.size(); i++){
+                 displayMessage = 
+                     businessList.get(i).getDetails() +
+                    "\nBusiness Type: " + businessList.get(i).getBusinessType() +
+                    "\nBusiness Name: " + businessList.get(i).getBusinessName() + 
+                    "\nIndustry: " + businessList.get(i).getIndustry() + 
+                    "\nNumber of staff: " + businessList.get(i).getNumOfStaff() + 
+                    "\nShort Term Goals: " + businessList.get(i).getShortTermGoals() + 
+                    "\nLong Term Goals: " + businessList.get(i).getLongTermGoals();
+                 
+
+                    //JOPtion pane wont work with listing all variables since different classes have different variables
+            /*JOptionPane.showMessageDialog(null, "Owner: " + businessList.get(i).getOwner() + "\n Business Name: " + businessList.get(i).getBusinessName() + "\n Industry: " + businessList.get(i).getIndustry() + "\n Number of Staff: " + businessList.get(i).getNumOfStaff() + "\n Short Term Goals: " + businessList.get(i).getShortTermGoals() + "\n Long Term Goals: " + businessList.get(i).getLongTermGoals());*/
+            JOptionPane.showMessageDialog(null,displayMessage);
+        }
+    }//GEN-LAST:event_displayBtnActionPerformed
+
+    private void searchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtnActionPerformed
+        // TODO add your handling code here:
+        String searchType = JOptionPane.showInputDialog(null, "Please enter the type you wish to search for:");
+        for(int i = 0; i < businessList.size();i++){
+            if(searchType.equalsIgnoreCase(businessList.get(i).getBusinessType())){
+                JOptionPane.showMessageDialog(null, businessList.get(i).getDetails() +
+                    "\nBusiness Type: " + businessList.get(i).getBusinessType() +
+                    "\nBusiness Name: " + businessList.get(i).getBusinessName() + 
+                    "\nIndustry: " + businessList.get(i).getIndustry() + 
+                    "\nNumber of staff: " + businessList.get(i).getNumOfStaff() + 
+                    "\nShort Term Goals: " + businessList.get(i).getShortTermGoals() + 
+                    "\nLong Term Goals: " + businessList.get(i).getLongTermGoals());
+            }
+        }
+        
+    }//GEN-LAST:event_searchBtnActionPerformed
 
     /**
      * @param args the command line arguments

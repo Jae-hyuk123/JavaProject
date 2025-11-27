@@ -16,8 +16,8 @@ public class LLC extends Business{
     
     
     //overloaded constructor
-    public LLC(String ceo, String businessName, String industry, int numOfStaff, int numOfBoardMembers){
-        super(businessName, industry, numOfStaff);
+    public LLC(String ceo, String businessType, String businessName, String industry, int numOfStaff, String shortTermGoals, String longTermGoals, int numOfBoardMembers){
+        super(businessType, businessName, industry, numOfStaff, shortTermGoals, longTermGoals);
         this.ceo = ceo;
         this.numOfBoardMembers = numOfBoardMembers;
     }
@@ -37,6 +37,13 @@ public class LLC extends Business{
     public void setNumOfBoardMembers(int numOfBoardMembers) {
         this.numOfBoardMembers = numOfBoardMembers;
     }
+    //had to use abstract class for business template so i could use getdetails method for each seperate business type other wise i was not able to get individual variables for example owner. ceo etc
+    
+    @Override
+    public String getDetails(){
+        return "CEO 1: " + ceo +
+                "\n Number of board members: " + numOfBoardMembers;  
+    }        
     
     //might add will come back to it later
     /*@Override
