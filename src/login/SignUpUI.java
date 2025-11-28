@@ -36,21 +36,20 @@ public class SignUpUI extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        titleLbl = new javax.swing.JLabel();
+        fNameLbl = new javax.swing.JLabel();
+        lNameLbl = new javax.swing.JLabel();
+        emailLbl = new javax.swing.JLabel();
+        idLbl = new javax.swing.JLabel();
+        passwordLbl = new javax.swing.JLabel();
         jTextFieldForFirstName = new javax.swing.JTextField();
         jTextFieldForLastName = new javax.swing.JTextField();
         jTextFieldForEMail = new javax.swing.JTextField();
         jTextFieldForID = new javax.swing.JTextField();
         jTextFieldForPassword = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        sexLbl = new javax.swing.JLabel();
         radioMale = new javax.swing.JRadioButton();
         radioFemale = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
@@ -72,33 +71,31 @@ public class SignUpUI extends javax.swing.JDialog {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jTextField3.setText("jTextField3");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sign Up");
+        titleLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 24)); // NOI18N
+        titleLbl.setForeground(new java.awt.Color(255, 255, 255));
+        titleLbl.setText("Sign Up");
 
-        jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("First Name");
+        fNameLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        fNameLbl.setForeground(new java.awt.Color(255, 255, 255));
+        fNameLbl.setText("First Name");
 
-        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Last Name");
+        lNameLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        lNameLbl.setForeground(new java.awt.Color(255, 255, 255));
+        lNameLbl.setText("Last Name");
 
-        jLabel5.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("E-mail");
+        emailLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        emailLbl.setForeground(new java.awt.Color(255, 255, 255));
+        emailLbl.setText("E-mail");
 
-        jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("ID");
+        idLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        idLbl.setForeground(new java.awt.Color(255, 255, 255));
+        idLbl.setText("ID");
 
-        jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Password");
+        passwordLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        passwordLbl.setForeground(new java.awt.Color(255, 255, 255));
+        passwordLbl.setText("Password");
 
         jTextFieldForFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,9 +124,9 @@ public class SignUpUI extends javax.swing.JDialog {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Sex");
+        sexLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 16)); // NOI18N
+        sexLbl.setForeground(new java.awt.Color(255, 255, 255));
+        sexLbl.setText("Sex");
 
         radioMale.setBackground(new java.awt.Color(243, 225, 210));
         buttonGroup1.add(radioMale);
@@ -198,16 +195,16 @@ public class SignUpUI extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(idLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sexLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lNameLbl)
+                                    .addComponent(fNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(passwordLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextFieldForEMail, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -239,37 +236,37 @@ public class SignUpUI extends javax.swing.JDialog {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(147, 147, 147))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldForFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(lNameLbl)
                     .addComponent(jTextFieldForLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(emailLbl)
                     .addComponent(jTextFieldForEMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextFieldForID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(idLbl))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(passwordLbl)
                     .addComponent(jTextFieldForPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(sexLbl)
                     .addComponent(radioMale)
                     .addComponent(radioFemale))
                 .addGap(18, 18, 18)
@@ -412,20 +409,15 @@ public class SignUpUI extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back2loginBtn;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel emailLbl;
+    private javax.swing.JLabel fNameLbl;
+    private javax.swing.JLabel idLbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBoxForAge;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextFieldForAddress;
     private javax.swing.JTextField jTextFieldForEMail;
     private javax.swing.JTextField jTextFieldForFirstName;
@@ -433,7 +425,11 @@ public class SignUpUI extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldForLastName;
     private javax.swing.JTextField jTextFieldForPassword;
     private javax.swing.JTextField jTextFieldForPhoneNumber;
+    private javax.swing.JLabel lNameLbl;
+    private javax.swing.JLabel passwordLbl;
     private javax.swing.JRadioButton radioFemale;
     private javax.swing.JRadioButton radioMale;
+    private javax.swing.JLabel sexLbl;
+    private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }

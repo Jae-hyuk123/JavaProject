@@ -46,7 +46,7 @@ public class AfterLoginUI extends javax.swing.JFrame {
         jLabelForLastName = new javax.swing.JLabel();
         jLabelForEMail = new javax.swing.JLabel();
         jLabelForID = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        titleLbl = new javax.swing.JLabel();
         voteBtn = new javax.swing.JButton();
         reportBtn = new javax.swing.JButton();
         mentorBtn = new javax.swing.JButton();
@@ -58,22 +58,22 @@ public class AfterLoginUI extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabelForFirstName.setBackground(new java.awt.Color(221, 122, 63));
-        jLabelForFirstName.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForFirstName.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabelForFirstName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForFirstName.setText("FirstName");
 
         jLabelForLastName.setBackground(new java.awt.Color(221, 122, 63));
-        jLabelForLastName.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForLastName.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabelForLastName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForLastName.setText("LastName");
 
         jLabelForEMail.setBackground(new java.awt.Color(221, 122, 63));
-        jLabelForEMail.setFont(new java.awt.Font("Segoe UI Black", 1, 8)); // NOI18N
+        jLabelForEMail.setFont(new java.awt.Font("Gill Sans MT", 1, 8)); // NOI18N
         jLabelForEMail.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForEMail.setText("E-Mail");
 
         jLabelForID.setBackground(new java.awt.Color(221, 122, 63));
-        jLabelForID.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForID.setFont(new java.awt.Font("Gill Sans MT", 1, 14)); // NOI18N
         jLabelForID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForID.setText("ID");
 
@@ -104,9 +104,9 @@ public class AfterLoginUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("INDUSTRY, INNOVATION & INFRASTRUCTURE APP");
+        titleLbl.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
+        titleLbl.setForeground(new java.awt.Color(255, 255, 255));
+        titleLbl.setText("INDUSTRY, INNOVATION & INFRASTRUCTURE APP");
 
         voteBtn.setBackground(new java.awt.Color(243, 225, 210));
         voteBtn.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
@@ -149,7 +149,7 @@ public class AfterLoginUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(34, 34, 34)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
@@ -175,13 +175,13 @@ public class AfterLoginUI extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(reportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(voteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mentorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(back2login, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -216,7 +216,6 @@ public class AfterLoginUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back2login;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelForEMail;
     private javax.swing.JLabel jLabelForFirstName;
     private javax.swing.JLabel jLabelForID;
@@ -224,6 +223,7 @@ public class AfterLoginUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton mentorBtn;
     private javax.swing.JButton reportBtn;
+    private javax.swing.JLabel titleLbl;
     private javax.swing.JButton voteBtn;
     // End of variables declaration//GEN-END:variables
 }
