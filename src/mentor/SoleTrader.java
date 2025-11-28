@@ -4,16 +4,19 @@
  */
 package mentor;
 
+import java.io.Serializable;
+
 /**
  *
  * @author marti
  */
-public class SoleTrader extends Business {
+public class SoleTrader extends Business  implements Serializable{
+
     //declare variables
     protected String owner;
-    
+
     //overloaded constructor
-    public SoleTrader(String owner, String businessType, String businessName, String industry, int numOfStaff, String shortTermGoals, String longTermGoals){
+    public SoleTrader(String owner, String businessType, String businessName, String industry, int numOfStaff, String shortTermGoals, String longTermGoals) {
         super(businessType, businessName, industry, numOfStaff, shortTermGoals, longTermGoals);
         this.owner = owner;
     }
@@ -26,11 +29,10 @@ public class SoleTrader extends Business {
         this.owner = owner;
     }
     //had to use abstract class for business template so i could use getdetails method for each seperate business type other wise i was not able to get individual variables for example owner. ceo etc
-    
+
     @Override
-    public String getDetails(){
-        return "Owner: " + owner;  
+    public String getDetails() {
+        return "Owner: " + owner;
     }
-    
-    
+
 }

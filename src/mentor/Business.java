@@ -4,12 +4,14 @@
  */
 package mentor;
 
+import java.io.Serializable;
+
 /**
  *
  * @author marti
  */
-public abstract class Business {
-    
+public abstract class Business implements Serializable{
+
     //Variables
     protected String businessType;
     protected String businessName;
@@ -17,10 +19,9 @@ public abstract class Business {
     protected int numOfStaff;
     protected String shortTermGoals;
     protected String longTermGoals;
-    
-    
+
     //default constructor
-    public Business(){
+    public Business() {
         businessType = "";
         businessName = "";
         industry = "";
@@ -28,16 +29,16 @@ public abstract class Business {
         shortTermGoals = "";
         longTermGoals = "";
     }
-    
+
     //overloaded constructor
-    public Business(String businessType, String businessName, String industry, int numOfStaff, String shortTermGoals, String longTermGoals){
+    public Business(String businessType, String businessName, String industry, int numOfStaff, String shortTermGoals, String longTermGoals) {
         this.businessType = businessType;
         this.businessName = businessName;
         this.industry = industry;
         this.numOfStaff = numOfStaff;
         this.shortTermGoals = shortTermGoals;
         this.longTermGoals = longTermGoals;
-        
+
     }
     //getters and setters for each variable
 
@@ -48,8 +49,7 @@ public abstract class Business {
     public void setBusinessType(String businessType) {
         this.businessType = businessType;
     }
-    
-    
+
     public String getBusinessName() {
         return businessName;
     }
@@ -57,7 +57,6 @@ public abstract class Business {
     public void setBusinessName(String businessName) {
         this.businessName = businessName;
     }
-
 
     public String getIndustry() {
         return industry;
@@ -92,7 +91,7 @@ public abstract class Business {
     }
     //this is so i can display all the details of the different classes
     //had to use abstract class for business template so i could use getdetails method for each seperate business type other wise i was not able to get individual variables for example owner. ceo etc
-    
+
     public abstract String getDetails();
 
 }

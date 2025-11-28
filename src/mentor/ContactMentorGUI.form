@@ -27,27 +27,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-              <Component id="infoLbl2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="titleLbl" min="-2" pref="177" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="276" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
-                      <Component id="infoLbl1" min="-2" pref="261" max="-2" attributes="0"/>
+                      <Component id="titleLbl" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="shortGoalsLbl" min="-2" pref="182" max="-2" attributes="0"/>
-                          <Component id="shortGoalsTf" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
@@ -59,81 +47,105 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="soletraderRB" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                                           <Component id="businessNameTf" pref="172" max="32767" attributes="0"/>
                                           <Component id="industryTf" alignment="0" max="32767" attributes="0"/>
                                           <Component id="numOfStaffTf" alignment="0" max="32767" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="limitedRB" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="partnershipRB" alignment="0" pref="98" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="limitedRB" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="partnershipRB" alignment="0" pref="172" max="32767" attributes="0"/>
+                                          <Component id="soletraderRB" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="searchBtn" pref="150" max="32767" attributes="0"/>
+                                          <Component id="searchBtn" max="32767" attributes="0"/>
                                           <Component id="submitBtn" max="32767" attributes="0"/>
+                                          <Component id="saveBtn" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="10" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="deleteBtn" max="32767" attributes="0"/>
-                                          <Component id="displayBtn" pref="155" max="32767" attributes="0"/>
+                                          <Component id="displayBtn" max="32767" attributes="0"/>
+                                          <Component id="readBtn" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="longGoalsLbl" min="-2" pref="132" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="owner2Tf" min="-2" pref="172" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="ownerLbl" min="-2" pref="61" max="-2" attributes="0"/>
-                                              <Component id="owner1Lbl" min="-2" max="-2" attributes="0"/>
-                                              <Component id="owner2Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ceoLbl" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="ownerTf" min="-2" pref="170" max="-2" attributes="0"/>
-                                                      <Component id="ceoTf" min="-2" pref="164" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                  <Component id="owner1Tf" min="-2" pref="172" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="numOfBoardMembersLbl" min="-2" max="-2" attributes="0"/>
                                           <Component id="longGoalsTf" min="-2" pref="200" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Component id="mainBtn" min="-2" pref="101" max="-2" attributes="0"/>
+                                              <Component id="mainBtn" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="reportBtn" pref="109" max="32767" attributes="0"/>
+                                              <Component id="reportBtn" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="numOfBoardMembersTf" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="voteBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="voteBtn" min="-2" pref="112" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="owner2Tf" min="-2" pref="172" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="ownerLbl" min="-2" pref="61" max="-2" attributes="0"/>
+                                                      <Component id="owner1Lbl" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="owner2Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ceoLbl" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="ownerTf" min="-2" pref="170" max="-2" attributes="0"/>
+                                                              <Component id="ceoTf" min="-2" pref="164" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                                          <Component id="owner1Tf" min="-2" pref="172" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                              <Component id="longGoalsLbl" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="shortGoalsTf" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="shortGoalsLbl" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="infoLbl2" min="-2" pref="719" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="infoLbl1" min="-2" pref="415" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -145,8 +157,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="infoLbl1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="infoLbl2" min="-2" pref="42" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="infoLbl2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -208,10 +220,20 @@
                   <Component id="shortGoalsTf" max="32767" attributes="0"/>
                   <Component id="longGoalsTf" pref="54" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="displayBtn" min="-2" pref="44" max="-2" attributes="0"/>
+                  <Component id="submitBtn" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="deleteBtn" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="searchBtn" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="voteBtn" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="reportBtn" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
@@ -220,14 +242,10 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="displayBtn" min="-2" pref="44" max="-2" attributes="0"/>
-                          <Component id="submitBtn" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="saveBtn" max="32767" attributes="0"/>
+                          <Component id="readBtn" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="searchBtn" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="deleteBtn" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
@@ -239,7 +257,7 @@
     <Component class="javax.swing.JLabel" name="titleLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="24" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="24" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -250,7 +268,7 @@
     <Component class="javax.swing.JLabel" name="infoLbl1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="20" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -261,18 +279,18 @@
     <Component class="javax.swing.JLabel" name="infoLbl2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Leave details about your business below and one of our mentors will assist you!"/>
+        <Property name="text" type="java.lang.String" value="Submit your business below and one of our mentors will assist you!"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="businessNameLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -283,7 +301,7 @@
     <Component class="javax.swing.JLabel" name="businessTypeLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -294,7 +312,7 @@
     <Component class="javax.swing.JLabel" name="industryLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -305,7 +323,7 @@
     <Component class="javax.swing.JLabel" name="numOfStaffLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -316,7 +334,7 @@
     <Component class="javax.swing.JLabel" name="shortGoalsLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -327,7 +345,7 @@
     <Component class="javax.swing.JLabel" name="longGoalsLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -392,7 +410,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
@@ -406,7 +424,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Main Page"/>
       </Properties>
@@ -420,7 +438,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Vote App"/>
       </Properties>
@@ -434,7 +452,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Report App"/>
       </Properties>
@@ -451,7 +469,7 @@
           <ComponentRef name="radiobutton"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sole Trader"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -475,7 +493,7 @@
           <ComponentRef name="radiobutton"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Partnership"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -499,7 +517,7 @@
           <ComponentRef name="radiobutton"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="LLC"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -520,7 +538,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Display"/>
       </Properties>
@@ -534,7 +552,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="18" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Search by Type"/>
       </Properties>
@@ -548,7 +566,7 @@
           <Color blue="d2" green="e1" red="f3" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="12" style="3"/>
+          <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
@@ -559,7 +577,7 @@
     <Component class="javax.swing.JLabel" name="ownerLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -582,7 +600,7 @@
     <Component class="javax.swing.JLabel" name="owner1Lbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -593,7 +611,7 @@
     <Component class="javax.swing.JLabel" name="owner2Lbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -622,7 +640,7 @@
     <Component class="javax.swing.JLabel" name="ceoLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -642,7 +660,7 @@
     <Component class="javax.swing.JLabel" name="numOfBoardMembersLbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Gill Sans Ultra Bold Condensed" size="16" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -658,6 +676,34 @@
           </Border>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="saveBtn">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d2" green="e1" red="f3" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="readBtn">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d2" green="e1" red="f3" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="View Saved"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="readBtnActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
