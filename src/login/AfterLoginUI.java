@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package login;
-import vote.*;
-import report.*;
+import java.awt.Color;
+import vote.VoteGUI;
+import report.ReportUI;
+import login.LoginInformation;
+import mentor.ContactMentorGUI;
 
 /**
  *
@@ -13,7 +16,7 @@ import report.*;
 public class AfterLoginUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AfterLoginUI.class.getName());
-    
+    private LoginInformation l;
     /**
      * Creates new form AfterLogin
      */
@@ -21,10 +24,12 @@ public class AfterLoginUI extends javax.swing.JFrame {
     // constructor
     public AfterLoginUI(LoginInformation l) {
         initComponents();
+        this.getContentPane().setBackground(Color.decode("#dd7a3f"));
         jLabelForFirstName.setText(l.getFirstName());
         jLabelForLastName.setText(l.getLastName());
         jLabelForEMail.setText(l.geteMail());
         jLabelForID.setText(l.getId());
+        this.l=l;
     }
 
     /**
@@ -42,18 +47,34 @@ public class AfterLoginUI extends javax.swing.JFrame {
         jLabelForEMail = new javax.swing.JLabel();
         jLabelForID = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButtonForVote = new javax.swing.JButton();
-        jButtonForReport = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        voteBtn = new javax.swing.JButton();
+        reportBtn = new javax.swing.JButton();
+        mentorBtn = new javax.swing.JButton();
+        back2login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(221, 122, 63));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabelForFirstName.setBackground(new java.awt.Color(221, 122, 63));
+        jLabelForFirstName.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForFirstName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForFirstName.setText("FirstName");
 
+        jLabelForLastName.setBackground(new java.awt.Color(221, 122, 63));
+        jLabelForLastName.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForLastName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForLastName.setText("LastName");
 
+        jLabelForEMail.setBackground(new java.awt.Color(221, 122, 63));
+        jLabelForEMail.setFont(new java.awt.Font("Segoe UI Black", 1, 8)); // NOI18N
+        jLabelForEMail.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForEMail.setText("E-Mail");
 
+        jLabelForID.setBackground(new java.awt.Color(221, 122, 63));
+        jLabelForID.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabelForID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelForID.setText("ID");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -80,45 +101,70 @@ public class AfterLoginUI extends javax.swing.JFrame {
                 .addComponent(jLabelForEMail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelForID)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setText("Application");
+        jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("INDUSTRY, INNOVATION & INFRASTRUCTURE APP");
 
-        jButtonForVote.setText("Vote");
-        jButtonForVote.addActionListener(new java.awt.event.ActionListener() {
+        voteBtn.setBackground(new java.awt.Color(243, 225, 210));
+        voteBtn.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
+        voteBtn.setText("Vote");
+        voteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonForVoteActionPerformed(evt);
+                voteBtnActionPerformed(evt);
             }
         });
 
-        jButtonForReport.setText("Report");
-        jButtonForReport.addActionListener(new java.awt.event.ActionListener() {
+        reportBtn.setBackground(new java.awt.Color(243, 225, 210));
+        reportBtn.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
+        reportBtn.setText("Report");
+        reportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonForReportActionPerformed(evt);
+                reportBtnActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Martin's");
+        mentorBtn.setBackground(new java.awt.Color(243, 225, 210));
+        mentorBtn.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
+        mentorBtn.setText("Mentor");
+        mentorBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mentorBtnActionPerformed(evt);
+            }
+        });
+
+        back2login.setBackground(new java.awt.Color(243, 225, 210));
+        back2login.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 18)); // NOI18N
+        back2login.setText("Sign-Out");
+        back2login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back2loginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jButtonForReport, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButtonForVote, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(reportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(voteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(mentorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(back2login, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(295, 295, 295))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,41 +174,56 @@ public class AfterLoginUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGap(20, 20, 20)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonForReport, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonForVote, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(106, Short.MAX_VALUE))
+                    .addComponent(reportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(voteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mentorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(back2login, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonForReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForReportActionPerformed
+    private void reportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportBtnActionPerformed
         // TODO add your handling code here:
-        ReportUI myReportUI = new ReportUI();
-        myReportUI.setVisible(true);        
-    }//GEN-LAST:event_jButtonForReportActionPerformed
+        new ReportUI(l).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_reportBtnActionPerformed
 
-    private void jButtonForVoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForVoteActionPerformed
+    private void voteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voteBtnActionPerformed
         // TODO add your handling code here:
-        VoteGUI myGUI = new VoteGUI();
-        myGUI.setVisible(true);        
-    }//GEN-LAST:event_jButtonForVoteActionPerformed
+        new VoteGUI(l).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_voteBtnActionPerformed
+
+    private void mentorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mentorBtnActionPerformed
+        // TODO add your handling code here:
+        new ContactMentorGUI(l).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mentorBtnActionPerformed
+
+    private void back2loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2loginActionPerformed
+        // TODO add your handling code here:
+        new LoginUI().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_back2loginActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButtonForReport;
-    private javax.swing.JButton jButtonForVote;
+    private javax.swing.JButton back2login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelForEMail;
     private javax.swing.JLabel jLabelForFirstName;
     private javax.swing.JLabel jLabelForID;
     private javax.swing.JLabel jLabelForLastName;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton mentorBtn;
+    private javax.swing.JButton reportBtn;
+    private javax.swing.JButton voteBtn;
     // End of variables declaration//GEN-END:variables
 }

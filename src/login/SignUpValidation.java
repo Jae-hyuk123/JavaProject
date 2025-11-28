@@ -64,7 +64,7 @@ public class SignUpValidation {
             JOptionPane.showMessageDialog(null, "Invalid Sex");
             return false;
         }
-        else if(phoneNumber == null || phoneNumber.length() < 5)
+        else if(phoneNumber == null || phoneNumber.length() > 10)
         {
             JOptionPane.showMessageDialog(null, "Invalid Phone Number. Phone number should be more than 5 digits");
             return false;

@@ -4,6 +4,7 @@
  */
 package login;
 
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
  * @author ABC
  */
 public class LoginUI extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(LoginUI.class.getName());
 
     /**
@@ -23,6 +24,8 @@ public class LoginUI extends javax.swing.JFrame {
      */
     public LoginUI() {
         initComponents();
+        this.getContentPane().setBackground(Color.decode("#dd7a3f"));
+
     }
 
     /**
@@ -44,10 +47,16 @@ public class LoginUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Login");
+        jLabel1.setFont(new java.awt.Font("Gill Sans Nova Ultra Bold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Log-In");
 
+        jLabel2.setFont(new java.awt.Font("Gill Sans Nova Ultra Bold", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ID");
 
+        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
 
         jTextFieldForID.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +71,9 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Sign in");
+        jButton1.setBackground(new java.awt.Color(243, 225, 210));
+        jButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 3, 36)); // NOI18N
+        jButton1.setText("Sign-In");
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +81,9 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
 
-        jButtonForSignUp.setText("sign up");
+        jButtonForSignUp.setBackground(new java.awt.Color(243, 225, 210));
+        jButtonForSignUp.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 3, 36)); // NOI18N
+        jButtonForSignUp.setText("Sign-Up");
         jButtonForSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonForSignUpActionPerformed(evt);
@@ -81,50 +94,44 @@ public class LoginUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextFieldForID, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordFieldForPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonForSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(13, 13, 13))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldForID, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .addComponent(jPasswordFieldForPassword)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonForSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextFieldForID))
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jPasswordFieldForPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(43, 43, 43))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addComponent(jButtonForSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldForID))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jPasswordFieldForPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonForSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
         pack();
@@ -141,49 +148,47 @@ public class LoginUI extends javax.swing.JFrame {
     private void jButtonForSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForSignUpActionPerformed
         // TODO add your handling code here:
         SignUpUI signUpDialog = new SignUpUI(this, true);   // argument 'this' means current class.
-                                                            // argument 'true' means users won't be able to use other pages except "SignUpUI"
+        // argument 'true' means users won't be able to use other pages except "SignUpUI"
         signUpDialog.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButtonForSignUpActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String id = jTextFieldForID.getText();
         String password = String.valueOf(jPasswordFieldForPassword.getPassword());
-        
+
         String validFirstName, validLastName, validEMail, validID, validSex, validPhoneNumber, validAddress, validAge;
-        validFirstName =  validLastName = validEMail = validID = validSex = validPhoneNumber = validAddress = validAge = null;
-        
+        validFirstName = validLastName = validEMail = validID = validSex = validPhoneNumber = validAddress = validAge = null;
+
         boolean idValidation = false;
         boolean passwordValidation = false;
-        
+
         // declare objects
         File inFile;
         FileReader fr;
         BufferedReader br;
-                
-        try
-        {
+
+        try {
             // create objects
             inFile = new File("users", "users.txt");
             fr = new FileReader(inFile);
             br = new BufferedReader(fr);
-            
+
             // use objects
             String line = br.readLine();
-            while(line != null)
-            {
+            while (line != null) {
                 String[] parts = line.split(", ");
-                
-                if(id.equals(parts[3])) // check the id
+
+                if (id.equals(parts[3])) // check the id
                 {
-                    if(password.equals(parts[4]))   // check the password
+                    if (password.equals(parts[4])) // check the password
                     {
                         // if both id and password are correct
                         idValidation = true;
                         passwordValidation = true;
-                        
+
                         validFirstName = parts[0];
                         validLastName = parts[1];
                         validEMail = parts[2];
@@ -193,39 +198,32 @@ public class LoginUI extends javax.swing.JFrame {
                         validAddress = parts[7];
                         validAge = parts[8];
                         break;
-                    }
-                    else    // if id is correct, but password is incorrect
+                    } else // if id is correct, but password is incorrect
                     {
                         idValidation = true;
                         break;
                     }
                 }
-                
+
                 line = br.readLine(); // go to the next line
             }
-            
-            if(idValidation == true && passwordValidation == true)  // if user id and password are correct
-            { 
-                JOptionPane.showMessageDialog(null, "login completed");
-                
+
+            if (idValidation == true && passwordValidation == true) // if user id and password are correct
+            {
+                JOptionPane.showMessageDialog(null, "Log-In completed!");
+
                 LoginInformation information = new LoginInformation(validFirstName, validLastName, validEMail, validID, validSex, validPhoneNumber, validAddress, validAge);
-                
+
                 AfterLoginUI LoginUI = new AfterLoginUI(information);
-                
+
                 LoginUI.setVisible(true);   // open the AfterLoginUI
                 dispose();  // exit
-            }
-            else if(idValidation == true && passwordValidation == false)
-            {
+            } else if (idValidation == true && passwordValidation == false) {
                 JOptionPane.showMessageDialog(null, "Wrong Password");
-            }
-            else
-            {
+            } else {
                 JOptionPane.showMessageDialog(null, "Wrong ID");
             }
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
